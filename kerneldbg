@@ -1,4 +1,5 @@
-Redirecting dmesg to an USB device if the Android is not showing up detailed loglevel. Can also redirect logcat to an USB.
+Redirecting dmesg to an USB device if the Android is not showing up detailed loglevel. Can also redirect logcat to an USB. This can happen
+even when SELinux is in permissive mode.IWO it cannot be completely disabled when booting with aosp image?!
 
 init.rc file
 on early-boot
