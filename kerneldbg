@@ -1,0 +1,13 @@
+Redirecting dmesg to an USB device if the Android is not showing up detailed loglevel. Can also redirect logcat to an USB.
+
+init.rc file
+on early-boot
+#mkdir /mnt/usb
+mount /dev/(usb_stick) /mnt/usb
+exec /system/bin/dmesg >  /mnt/usb/dmesg.log
+exec /system/bin/logcat > /mnt/usb/logcat.log
+
+Kernel Config:
+CONFIG_VT_CONSOLE=y
+CONFIG_TTY=y
+CONFIG_VT=y
